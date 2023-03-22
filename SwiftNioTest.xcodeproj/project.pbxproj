@@ -11,6 +11,8 @@
 		90ADCDA129CB700600A1BA8E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90ADCDA029CB700600A1BA8E /* ContentView.swift */; };
 		90ADCDA329CB700600A1BA8E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90ADCDA229CB700600A1BA8E /* Assets.xcassets */; };
 		90ADCDA629CB700600A1BA8E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90ADCDA529CB700600A1BA8E /* Preview Assets.xcassets */; };
+		90ADCDAF29CB704900A1BA8E /* AsyncHTTPClient in Frameworks */ = {isa = PBXBuildFile; productRef = 90ADCDAE29CB704900A1BA8E /* AsyncHTTPClient */; };
+		90ADCDBB29CB73B500A1BA8E /* DataDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90ADCDBA29CB73B500A1BA8E /* DataDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,7 @@
 		90ADCDA029CB700600A1BA8E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		90ADCDA229CB700600A1BA8E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		90ADCDA529CB700600A1BA8E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		90ADCDBA29CB73B500A1BA8E /* DataDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +29,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				90ADCDAF29CB704900A1BA8E /* AsyncHTTPClient in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -53,6 +57,7 @@
 			children = (
 				90ADCD9E29CB700600A1BA8E /* SwiftNioTestApp.swift */,
 				90ADCDA029CB700600A1BA8E /* ContentView.swift */,
+				90ADCDBA29CB73B500A1BA8E /* DataDelegate.swift */,
 				90ADCDA229CB700600A1BA8E /* Assets.xcassets */,
 				90ADCDA429CB700600A1BA8E /* Preview Content */,
 			);
@@ -83,6 +88,9 @@
 			dependencies = (
 			);
 			name = SwiftNioTest;
+			packageProductDependencies = (
+				90ADCDAE29CB704900A1BA8E /* AsyncHTTPClient */,
+			);
 			productName = SwiftNioTest;
 			productReference = 90ADCD9B29CB700600A1BA8E /* SwiftNioTest.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +119,9 @@
 				Base,
 			);
 			mainGroup = 90ADCD9229CB700600A1BA8E;
+			packageReferences = (
+				90ADCDAD29CB704900A1BA8E /* XCRemoteSwiftPackageReference "async-http-client" */,
+			);
 			productRefGroup = 90ADCD9C29CB700600A1BA8E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -139,6 +150,7 @@
 			files = (
 				90ADCDA129CB700600A1BA8E /* ContentView.swift in Sources */,
 				90ADCD9F29CB700600A1BA8E /* SwiftNioTestApp.swift in Sources */,
+				90ADCDBB29CB73B500A1BA8E /* DataDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -337,6 +349,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		90ADCDAD29CB704900A1BA8E /* XCRemoteSwiftPackageReference "async-http-client" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/swift-server/async-http-client";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		90ADCDAE29CB704900A1BA8E /* AsyncHTTPClient */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 90ADCDAD29CB704900A1BA8E /* XCRemoteSwiftPackageReference "async-http-client" */;
+			productName = AsyncHTTPClient;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 90ADCD9329CB700600A1BA8E /* Project object */;
 }
